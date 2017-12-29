@@ -6,6 +6,13 @@ package ru.MT.model;
 public class Language {
     private String lang;
 
+    public Language() {
+    }
+
+//    public Language(String lang) {
+//        this.lang = lang;
+//    }
+
     public String getLang() {
         return lang;
     }

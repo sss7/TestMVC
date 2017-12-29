@@ -4,16 +4,16 @@
 <head><title>Airports info</title></head>
 <body>
 
-<c:set var="ctx" value="${request.getContextPath()}" />
-<a href="${ctx}/lang"><b>Lang : ${param.lang}</b></a><br/><br/>
+<%--<c:set var="ctx" value="${request.getContextPath()}" />--%>
+<a href="/lang"><b>Lang : ${lang}</b></a><br/><br/>
 <%--Name : ${param.name}<br/>--%>
 <%--Name : ${paramValues.name[0]}<br/>--%>
 
 <table>
 
-    <c:forEach items="${paramValues.names}" var="airport">
+    <c:forEach items="${names}" var="airport">
         <tr>
-            <td><c:out value="${airport}" /></td>
+            <td>${airport.name}</td>
             <%--<td><c:out value="${airport}" /></td>--%>
         </tr>
     </c:forEach>
