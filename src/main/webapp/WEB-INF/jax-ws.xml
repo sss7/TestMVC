@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+            xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd
+               http://www.springframework.org/schema/mvc
+               http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <bean id="OnlineTimeTableSoap" class="org.springframework.remoting.jaxws.JaxWsPortProxyFactoryBean">
+        <property name="serviceInterface" value="ru.MT.webservices.OnlineTimeTableSoap"/>
+        <property name="wsdlDocumentUrl" value="http://86.57.245.235/TimeTable/Service.asmx?WSDL"/>
+        <property name="namespaceUri" value="http://webservices.belavia.by/"/>
+        <property name="serviceName" value="OnlineTimeTable"/>
+        <property name="portName" value="OnlineTimeTableSoap"/>
+    </bean>
+
+</beans>
